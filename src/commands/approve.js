@@ -36,9 +36,46 @@ module.exports = {
                 }
             }
         }
-        const pendingUser = findPendingUser(discordId);
+        let pendingUser = findPendingUser(discordId);
         if (!pendingUser) {
-            return message.reply('❌ No pending signup found for that user.');
+            const member = message.guild.members.cache.get(discordId);
+            if (!member) {
+                return message.reply('❌ No pending signup found for that user and they are not in the server.');
+            }
+            
+            const melonRoleId = process.env.MELON_ROLE_ID;
+            const weenorlRoleId = process.env.WEENOR_ROLE_ID;
+            
+            let userTeam = null;
+            if (member.roles.cache.has(melonRoleId)) {
+                userTeam = 'melon';
+            } else if (member.roles.cache.has(weenorlRoleId)) {
+                userTeam = 'weenor';
+            }
+            
+            if (!userTeam) {
+                return message.reply('❌ No pending signup found for that user and they do not have a team role.');
+            }
+            
+            const { findUserInUnprocessed, removeUnprocessedUser } = require('../utils/config');
+            const unprocessedUser = findUserInUnprocessed(targetUser.username) ||
+                                   findUserInUnprocessed(member.displayName);
+            
+            if (unprocessedUser) {
+                const { moveUnprocessedToPending } = require('../utils/config');
+                moveUnprocessedToPending(unprocessedUser.username, discordId);
+                pendingUser = {
+                    username: unprocessedUser.username,
+                    team: unprocessedUser.team,
+                    discordId: discordId
+                };
+            } else {
+                pendingUser = {
+                    username: member.displayName || targetUser.username,
+                    team: userTeam,
+                    discordId: discordId
+                };
+            }
         }
         try {
             const normalizedTeam = pendingUser.team.toLowerCase().trim();
