@@ -1,0 +1,80 @@
+8 |
+-
+7 |
+-
+6 |
+-
+5 |
+-
+4 |
+- 
+3 |
+-
+2 | 
+-
+1 
+ a | b | c | d | e | f | g
+
+ a1 - zombie helmet
+ b1 - steel ring
+ c1 - tome of fire
+ d1 - seers ring
+ e1 - ahrim's staff
+ f1 - fletching knife
+ g1 - toktz-ket-xil
+
+ a2 - purifying sigil (middle), purifying sigil (right), purifying sigil (top), purifying sigil (bottom), purifying sigil (left) [ONLY NEED 2 DIFFERENT PIECES]
+ b2 - Pharaoh's sceptre
+ c2 - Ham joint
+ d2 - Scurry
+ e2 - Dragon hunter wand
+ f2 - Sraracha
+ g2 - Crystal armour seed, crystal armour seed
+
+ a3 - Bandos platebody
+ b3 - Eclipse atlatl, Eclipse moon helm, Eclipse moon chestplate, Eclipse moon tassets, Dual macuahuitl, Blood moon helm, Blood moon chestplate, Blood moon tassets, Blue moon spear, Blue moon helm, Blue moon chestplate, Blue moon tassets [ONLY NEED 6 DIFFERENT PIECES]
+ c3 - Abyssal lantern
+ d3 - Bran
+ e3 - Baby chinchompa, Beaver, Giant squirrel, Heron, Rift guardian, Rock golem, Rocky, Tangleroot [ONLY NEED 1 OF ANY]
+ f3 - Burning claw, Burning claw [NEED TO GET IT TWICE]
+ g3 - Ranger boots
+
+ a4 - Jar of dreams
+ b4 - Delve level 25
+ c4 - Eye of ayak
+ d4 - Viggora's chainmace
+ e4 - Sunfire fanatic helm, Sunfire fanatic cuirass, Sunfire fanatic chausses [NEED 3 TOTAL OF ANY PIECES, CAN HAVE DUPLICATES]
+ f4 - Prince black dragon
+ g4 - Jar of sand
+
+ a5 - Smolcano
+ b5 - Voidwaker hilt
+ c5 - Odium shard 1, Odium shard 2, Odium shard 3 [NEED ALL 3 PIECES]
+ d5 - Sandwich lady hat, Sandwich lady top, Sandwich lady bottom [NEED ALL 3 PIECES]
+ e5 - Royal crown, Royal gown top, Royal gown bottom, Royal sceptre [NEED ANY PIECE]
+ f5 - Lesser demon mask, Greater demon mask, Black demon mask, Jungle demon mask, Old demon mask [NEED ANY MASK]
+ g5 - Quetzin
+
+ a6 - Avernic treads
+ b6 - Armadyl godsword ornament kit, Bandos godsword ornament kit, Saradomin godsword ornament kit, Zamorak godsword ornament kit [NEED ANY KIT]
+ c6 - Nid
+ d6 - Baron, Lil'viathan [NEED 1 TOTAL ONLY, CAN BE EITHER ONE]
+ e6 - Twisted ancestral colour kit, Twisted ancestral colour kit [NEED 2 OF THEM]
+ f6 - Sanguine ornament kit, Holy ornament kit [NEED 2 TOTAL, CAN BE SAME KIT]
+ g6 - Ring of endurance
+
+ a7 - Ancient hilt
+ b7 - Inquisitor's mace
+ c7 - Tanzanite mutagen, Magma mutagen [NEED 1 TOTAL ONLY, CAN BE EITHER ONE]
+ d7 - Tumeken's shadow
+ e7 - Pet k'ril tsutsaroth
+ f7 - Scythe of vitur
+ g7 - Muphin
+
+ a8 - Oathplate helm, Oathplate chest, Oathplace legs [NEED 1 OF EACH PIECE]
+ b8 - Justiciar faceguard, Justiciar chestguard, Justiciar legguards [NEED 1 OF EACH PIECE]
+ c8 - Elder maul
+ d8 - Leviathan's lure, Siren's staff, Executioner's axe head, Eye of the duke [NEED 1 OF EACH PIECE]
+ e8 - Gilded spade, Gilded pickaxe, Gilded axe, Gilded hasta, Gilded spear, Gilded scimitar, Gilded 2h sword, Gilded full helm, Gilded med helm, Gilded platebody, Gilded chainbody, Gilded platebody, Gilded platelegs, Gilded plateskirt, Gilded kiteshield, Gilded sq shield, Gilded boots, Gilded coif, Gilded d'hide body, Gilded d'hide chaps, Gilded d'hide vambraces [NEED ONLY 1 PIECE TOTAL, CAN BE ANY PIECE]
+ f8 - Masori mask, Masori body, Masori chaps [NEED 1 OF EACH PIECE]
+ g8 - Spectral sigil

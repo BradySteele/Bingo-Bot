@@ -1,0 +1,24 @@
+{
+  "name": "discord-competition-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for managing competition signups with Google Forms integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["discord", "bot", "competition", "google-forms"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "google-spreadsheet": "^4.1.2",
+    "google-auth-library": "^9.4.0",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
