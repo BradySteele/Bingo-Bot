@@ -14,9 +14,7 @@
     "discord.js": "^14.14.1",
     "google-spreadsheet": "^4.1.2",
     "google-auth-library": "^9.4.0",
-    "dotenv": "^16.3.1",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
