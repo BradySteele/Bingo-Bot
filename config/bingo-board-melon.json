@@ -1,0 +1,747 @@
+{
+  "teamName": "Melon",
+  "totalPoints": 0,
+  "tiles": {
+    "a1": {
+      "coordinate": "a1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "zombie helmet"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b1": {
+      "coordinate": "b1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "steel ring"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c1": {
+      "coordinate": "c1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "tome of fire"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d1": {
+      "coordinate": "d1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "seers ring"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e1": {
+      "coordinate": "e1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "ahrim's staff"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f1": {
+      "coordinate": "f1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "fletching knife"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g1": {
+      "coordinate": "g1",
+      "points": 1,
+      "completed": false,
+      "requiredItems": [
+        "toktz-ket-xil"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a2": {
+      "coordinate": "a2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "purifying sigil (middle)",
+        "purifying sigil (right)",
+        "purifying sigil (top)",
+        "purifying sigil (bottom)",
+        "purifying sigil (left)"
+      ],
+      "requiredCount": 2,
+      "requirementType": "different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b2": {
+      "coordinate": "b2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "pharaoh's sceptre"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c2": {
+      "coordinate": "c2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "ham joint"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d2": {
+      "coordinate": "d2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "scurry"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e2": {
+      "coordinate": "e2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "dragon hunter wand"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f2": {
+      "coordinate": "f2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "sraracha"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g2": {
+      "coordinate": "g2",
+      "points": 2,
+      "completed": false,
+      "requiredItems": [
+        "crystal armour seed"
+      ],
+      "requiredCount": 2,
+      "requirementType": "multiple_same",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a3": {
+      "coordinate": "a3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "bandos platebody"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b3": {
+      "coordinate": "b3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "eclipse atlatl",
+        "eclipse moon helm",
+        "eclipse moon chestplate",
+        "eclipse moon tassets",
+        "dual macuahuitl",
+        "blood moon helm",
+        "blood moon chestplate",
+        "blood moon tassets",
+        "blue moon spear",
+        "blue moon helm",
+        "blue moon chestplate",
+        "blue moon tassets"
+      ],
+      "requiredCount": 6,
+      "requirementType": "different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c3": {
+      "coordinate": "c3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "abyssal lantern"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d3": {
+      "coordinate": "d3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "bran"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e3": {
+      "coordinate": "e3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "baby chinchompa",
+        "beaver",
+        "giant squirrel",
+        "heron",
+        "rift guardian",
+        "rock golem",
+        "rocky",
+        "tangleroot"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f3": {
+      "coordinate": "f3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "burning claw"
+      ],
+      "requiredCount": 2,
+      "requirementType": "multiple_same",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g3": {
+      "coordinate": "g3",
+      "points": 3,
+      "completed": false,
+      "requiredItems": [
+        "ranger boots"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a4": {
+      "coordinate": "a4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "jar of dreams"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b4": {
+      "coordinate": "b4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "delve level 25"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c4": {
+      "coordinate": "c4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "eye of ayak"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d4": {
+      "coordinate": "d4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "viggora's chainmace"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e4": {
+      "coordinate": "e4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "sunfire fanatic helm",
+        "sunfire fanatic cuirass",
+        "sunfire fanatic chausses"
+      ],
+      "requiredCount": 3,
+      "requirementType": "total_any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f4": {
+      "coordinate": "f4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "prince black dragon"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g4": {
+      "coordinate": "g4",
+      "points": 4,
+      "completed": false,
+      "requiredItems": [
+        "jar of sand"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a5": {
+      "coordinate": "a5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "smolcano"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b5": {
+      "coordinate": "b5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "voidwaker hilt"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c5": {
+      "coordinate": "c5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "odium shard 1",
+        "odium shard 2",
+        "odium shard 3"
+      ],
+      "requiredCount": 3,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d5": {
+      "coordinate": "d5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "sandwich lady hat",
+        "sandwich lady top",
+        "sandwich lady bottom"
+      ],
+      "requiredCount": 3,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e5": {
+      "coordinate": "e5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "royal crown",
+        "royal gown top",
+        "royal gown bottom",
+        "royal sceptre"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f5": {
+      "coordinate": "f5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "lesser demon mask",
+        "greater demon mask",
+        "black demon mask",
+        "jungle demon mask",
+        "old demon mask"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g5": {
+      "coordinate": "g5",
+      "points": 5,
+      "completed": false,
+      "requiredItems": [
+        "quetzin"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a6": {
+      "coordinate": "a6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "avernic treads"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b6": {
+      "coordinate": "b6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "armadyl godsword ornament kit",
+        "bandos godsword ornament kit",
+        "saradomin godsword ornament kit",
+        "zamorak godsword ornament kit"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c6": {
+      "coordinate": "c6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "nid"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d6": {
+      "coordinate": "d6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "baron",
+        "lil'viathan"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e6": {
+      "coordinate": "e6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "twisted ancestral colour kit"
+      ],
+      "requiredCount": 2,
+      "requirementType": "multiple_same",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f6": {
+      "coordinate": "f6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "sanguine ornament kit",
+        "holy ornament kit"
+      ],
+      "requiredCount": 2,
+      "requirementType": "total_any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g6": {
+      "coordinate": "g6",
+      "points": 6,
+      "completed": false,
+      "requiredItems": [
+        "ring of endurance"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a7": {
+      "coordinate": "a7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "ancient hilt"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b7": {
+      "coordinate": "b7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "inquisitor's mace"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c7": {
+      "coordinate": "c7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "tanzanite mutagen",
+        "magma mutagen"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d7": {
+      "coordinate": "d7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "tumeken's shadow"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e7": {
+      "coordinate": "e7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "pet k'ril tsutsaroth"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f7": {
+      "coordinate": "f7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "scythe of vitur"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g7": {
+      "coordinate": "g7",
+      "points": 7,
+      "completed": false,
+      "requiredItems": [
+        "muphin"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "a8": {
+      "coordinate": "a8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "oathplate helm",
+        "oathplate chest",
+        "oathplate legs"
+      ],
+      "requiredCount": 3,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "b8": {
+      "coordinate": "b8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "justiciar faceguard",
+        "justiciar chestguard",
+        "justiciar legguards"
+      ],
+      "requiredCount": 3,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "c8": {
+      "coordinate": "c8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "elder maul"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "d8": {
+      "coordinate": "d8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "leviathan's lure",
+        "siren's staff",
+        "executioner's axe head",
+        "eye of the duke"
+      ],
+      "requiredCount": 4,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "e8": {
+      "coordinate": "e8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "gilded spade",
+        "gilded pickaxe",
+        "gilded axe",
+        "gilded hasta",
+        "gilded spear",
+        "gilded scimitar",
+        "gilded 2h sword",
+        "gilded full helm",
+        "gilded med helm",
+        "gilded platebody",
+        "gilded chainbody",
+        "gilded platelegs",
+        "gilded plateskirt",
+        "gilded kiteshield",
+        "gilded sq shield",
+        "gilded boots",
+        "gilded coif",
+        "gilded d'hide body",
+        "gilded d'hide chaps",
+        "gilded d'hide vambraces"
+      ],
+      "requiredCount": 1,
+      "requirementType": "any",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "f8": {
+      "coordinate": "f8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "masori mask",
+        "masori body",
+        "masori chaps"
+      ],
+      "requiredCount": 3,
+      "requirementType": "all_different",
+      "obtainedItems": [],
+      "submissions": []
+    },
+    "g8": {
+      "coordinate": "g8",
+      "points": 8,
+      "completed": false,
+      "requiredItems": [
+        "spectral sigil"
+      ],
+      "requiredCount": 1,
+      "requirementType": "single",
+      "obtainedItems": [],
+      "submissions": []
+    }
+  }
+}
