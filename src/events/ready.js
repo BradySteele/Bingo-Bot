@@ -72,7 +72,7 @@ const checkExistingStreamers = async (client) => {
                             title: `${platform} Stream Started!`,
                             description: `${member} is now live!`,
                             fields: [
-                                { name: '🎮 Game/Category', value: streamTitle, inline: true },
+                                { name: '🎮 Game/Category', value: streamingActivity?.state || streamTitle, inline: true },
                                 { name: '👤 Streamer', value: member.displayName || member.user.username, inline: true },
                                 { name: '🔗 Watch Now', value: streamUrl ? `[Click here to watch!](${streamUrl})` : 'No URL available', inline: false }
                             ],
@@ -88,9 +88,6 @@ const checkExistingStreamers = async (client) => {
                         
                         if (streamDetails) {
                             streamEmbed.fields.push({ name: '📝 Title', value: streamDetails, inline: false });
-                        }
-                        if (streamState) {
-                            streamEmbed.fields.push({ name: '🎯 Status', value: streamState, inline: true });
                         }
                         
                         try {
