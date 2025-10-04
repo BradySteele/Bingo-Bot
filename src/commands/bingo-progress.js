@@ -6,7 +6,7 @@ const path = require('path');
 function getCustomTileDescription(tile) {
     const customDescriptions = {
         'a2': 'Purifying Sigil pieces',
-        'b3': 'Moons uniques',
+        'b3': 'Moons uniques', 
         'a8': 'Full Oathplate',
         'b8': 'Full Justiciar',
         'd8': 'All DT2 uniques',
@@ -79,9 +79,6 @@ module.exports = {
             
             const bingoBoard = JSON.parse(fs.readFileSync(boardPath, 'utf8'));
             
-            const completedItems = new Set();
-            const itemCompletions = {};
-            
             const tiles = Object.values(bingoBoard.tiles);
             const totalTiles = tiles.length;
             const completedTiles = tiles.filter(tile => tile.completed);
@@ -122,7 +119,9 @@ module.exports = {
             const teamColor = userTeam === 'melon' ? 0x90EE90 : 0xFFB6C1;
             const teamEmoji = userTeam === 'melon' ? '🍈' : '🌭';
             
-            const embed = {
+            const messages = [];
+            
+            const firstEmbed = {
                 color: teamColor,
                 title: `${teamEmoji} Team ${userTeam.charAt(0).toUpperCase() + userTeam.slice(1)} Bingo Progress`,
                 description: `**Progress: ${completedCount}/${totalTiles} tiles completed (${progressPercentage}%)**\n**Points: ${earnedPoints}/${totalPoints}**\n\`${progressBar}\``,
@@ -133,6 +132,14 @@ module.exports = {
                 },
                 timestamp: new Date().toISOString()
             };
+            
+            if (completed.length === totalTiles) {
+                firstEmbed.fields.push({
+                    name: '🎉 All Tiles Complete!',
+                    value: 'Congratulations! Your team has completed the entire bingo board!',
+                    inline: false
+                });
+            }
             
             if (completed.length > 0) {
                 const completedText = completed.join('\n');
@@ -150,14 +157,14 @@ module.exports = {
                     if (currentChunk) chunks.push(currentChunk);
                     
                     chunks.forEach((chunk, index) => {
-                        embed.fields.push({
+                        firstEmbed.fields.push({
                             name: index === 0 ? '✅ Completed Tiles' : '✅ Completed Tiles (continued)',
                             value: chunk,
                             inline: false
                         });
                     });
                 } else {
-                    embed.fields.push({
+                    firstEmbed.fields.push({
                         name: '✅ Completed Tiles',
                         value: completedText,
                         inline: false
@@ -165,7 +172,20 @@ module.exports = {
                 }
             }
             
+            messages.push({ embeds: [firstEmbed] });
+            
             if (inProgress.length > 0) {
+                const inProgressEmbed = {
+                    color: teamColor,
+                    title: '🔄 In Progress Tiles',
+                    fields: [],
+                    footer: {
+                        text: 'Bingo Bot • Team Progress',
+                        icon_url: message.guild.iconURL({ dynamic: true })
+                    },
+                    timestamp: new Date().toISOString()
+                };
+                
                 const inProgressText = inProgress.join('\n');
                 if (inProgressText.length > 1024) {
                     const chunks = [];
@@ -181,43 +201,85 @@ module.exports = {
                     if (currentChunk) chunks.push(currentChunk);
                     
                     chunks.forEach((chunk, index) => {
-                        embed.fields.push({
+                        inProgressEmbed.fields.push({
                             name: index === 0 ? '🔄 In Progress' : '🔄 In Progress (continued)',
                             value: chunk,
                             inline: false
                         });
                     });
                 } else {
-                    embed.fields.push({
+                    inProgressEmbed.fields.push({
                         name: '🔄 In Progress',
                         value: inProgressText,
                         inline: false
                     });
                 }
+                
+                messages.push({ embeds: [inProgressEmbed] });
             }
             
             if (remaining.length > 0) {
-                const remainingToShow = remaining.slice(0, 10);
-                const remainingText = remainingToShow.join('\n');
-                const hiddenCount = remaining.length - remainingToShow.length;
+                const remainingText = remaining.join('\n');
                 
-                embed.fields.push({
-                    name: `❌ Remaining Tiles${hiddenCount > 0 ? ` (showing 10/${remaining.length})` : ''}`,
-                    value: remainingText,
-                    inline: false
-                });
+                if (remainingText.length <= 1024) {
+                    const remainingEmbed = {
+                        color: teamColor,
+                        title: '❌ Remaining Tiles',
+                        fields: [{
+                            name: '❌ Remaining Tiles',
+                            value: remainingText,
+                            inline: false
+                        }],
+                        footer: {
+                            text: 'Bingo Bot • Team Progress',
+                            icon_url: message.guild.iconURL({ dynamic: true })
+                        },
+                        timestamp: new Date().toISOString()
+                    };
+                    messages.push({ embeds: [remainingEmbed] });
+                } else {
+                    const chunks = [];
+                    let currentChunk = '';
+                    for (const item of remaining) {
+                        if ((currentChunk + item + '\n').length > 1024) {
+                            chunks.push(currentChunk);
+                            currentChunk = item + '\n';
+                        } else {
+                            currentChunk += item + '\n';
+                        }
+                    }
+                    if (currentChunk) chunks.push(currentChunk);
+                    
+                    chunks.forEach((chunk, index) => {
+                        const remainingEmbed = {
+                            color: teamColor,
+                            title: index === 0 ? '❌ Remaining Tiles' : `❌ Remaining Tiles (${index + 1}/${chunks.length})`,
+                            fields: [{
+                                name: index === 0 ? '❌ Remaining Tiles' : '❌ Remaining Tiles (continued)',
+                                value: chunk,
+                                inline: false
+                            }],
+                            footer: {
+                                text: 'Bingo Bot • Team Progress',
+                                icon_url: message.guild.iconURL({ dynamic: true })
+                            },
+                            timestamp: new Date().toISOString()
+                        };
+                        messages.push({ embeds: [remainingEmbed] });
+                    });
+                }
             }
             
-            if (completed.length === totalTiles) {
-                embed.fields.push({
-                    name: '🎉 All Tiles Complete!',
-                    value: 'Congratulations! Your team has completed the entire bingo board!',
-                    inline: false
-                });
+            for (let i = 0; i < messages.length; i++) {
+                if (i === 0) {
+                    await message.reply(messages[i]);
+                } else {
+                    await message.channel.send(messages[i]);
+                }
+                if (i < messages.length - 1) {
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
             }
-            
-            
-            await message.reply({ embeds: [embed] });
             
         } catch (error) {
             console.error('Error in bingo-progress command:', error);
