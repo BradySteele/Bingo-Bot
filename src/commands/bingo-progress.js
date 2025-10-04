@@ -6,21 +6,22 @@ const path = require('path');
 function getCustomTileDescription(tile) {
     const customDescriptions = {
         'a2': 'Purifying Sigil pieces',
-        'b3': 'Moons uniques', 
         'a8': 'Full Oathplate',
+        'b3': 'Moons uniques',
+        'b6': 'Godsword Ornament Kit',
         'b8': 'Full Justiciar',
-        'd8': 'All DT2 uniques',
-        'f8': 'Full Masori',
-        'c5': 'All Odium shards',
-        'd5': 'Full Sandwich Lady outfit',
-        'e5': 'Any Royal outfit piece',
+        'c5': 'All 3 Odium Shards',
+        'c7': 'Any Mutagen',
+        'd5': 'Full Sandwich Lady',
+        'd6': 'Baron or Lil\'viathan',
+        'd8': 'Completed Soulreaper Axe',
         'e3': 'Any skilling pet',
+        'e4': 'Sunfire Fanatic Pieces',
+        'e5': 'Any Royal piece',
+        'e8': 'Any Gilded piece',
         'f5': 'Any demon mask',
-        'b6': 'Any godsword ornament kit',
-        'd6': 'Any Leviathan pet',
-        'e4': 'Sunfire fanatic pieces',
-        'f6': 'TOB ornament kits',
-        'e8': 'Any gilded item'
+        'f6': 'Holy or Sanguine kits',
+        'f8': 'Full Masori'
     };
     
     if (customDescriptions[tile.coordinate]) {
@@ -86,7 +87,7 @@ module.exports = {
             const remainingTiles = tiles.filter(tile => !tile.completed && (!tile.obtainedItems || tile.obtainedItems.length === 0));
             
             const completedCount = completedTiles.length;
-            const totalPoints = bingoBoard.totalPoints || tiles.reduce((sum, tile) => sum + tile.points, 0);
+            const totalPoints = tiles.reduce((sum, tile) => sum + tile.points, 0);
             const earnedPoints = completedTiles.reduce((sum, tile) => sum + tile.points, 0);
             const progressPercentage = Math.round((completedCount / totalTiles) * 100);
             
