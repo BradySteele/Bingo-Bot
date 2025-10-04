@@ -89,10 +89,11 @@ module.exports = {
             const completedCount = completedTiles.length;
             const totalPoints = tiles.reduce((sum, tile) => sum + tile.points, 0);
             const earnedPoints = completedTiles.reduce((sum, tile) => sum + tile.points, 0);
-            const progressPercentage = Math.round((completedCount / totalTiles) * 100);
+            const tileProgressPercentage = Math.round((completedCount / totalTiles) * 100);
+            const pointProgressPercentage = Math.round((earnedPoints / totalPoints) * 100);
             
             const progressBarLength = 20;
-            const filledLength = Math.round((completedCount / totalTiles) * progressBarLength);
+            const filledLength = Math.round((earnedPoints / totalPoints) * progressBarLength);
             const progressBar = '█'.repeat(filledLength) + '░'.repeat(progressBarLength - filledLength);
             
             const completed = [];
@@ -125,7 +126,7 @@ module.exports = {
             const firstEmbed = {
                 color: teamColor,
                 title: `${teamEmoji} Team ${userTeam.charAt(0).toUpperCase() + userTeam.slice(1)} Bingo Progress`,
-                description: `**Progress: ${completedCount}/${totalTiles} tiles completed (${progressPercentage}%)**\n**Points: ${earnedPoints}/${totalPoints}**\n\`${progressBar}\``,
+                description: `**Progress: ${completedCount}/${totalTiles} tiles completed (${tileProgressPercentage}%)**\n**Points: ${earnedPoints}/${totalPoints} (${pointProgressPercentage}%)**\n\`${progressBar}\``,
                 fields: [],
                 footer: {
                     text: 'Bingo Bot • Team Progress',
