@@ -120,30 +120,17 @@ function canSubmitItem(tile, exactItemName, submittedBy) {
         return { valid: false, reason: 'Tile already completed' };
     }
     
-    // For total_any requirement type, allow any submissions (including duplicates from same user)
-    if (tile.requirementType === 'total_any') {
-        return { valid: true, exactItemName };
-    }
-    
-    // Check if this specific user has already submitted this exact item (for non-total_any types)
-    const userSubmission = tile.submissions.find(sub =>
-        sub.submittedBy === submittedBy &&
-        sub.itemName.toLowerCase().trim() === exactItemName.toLowerCase().trim()
-    );
-    if (userSubmission) {
-        return { valid: false, reason: 'You have already submitted this item for this tile' };
-    }
-    
-    // For requirement types that don't allow duplicates, check if anyone has submitted this item
+    // Only block duplicates for requirement types that specifically need unique items
     if (tile.requirementType === 'different' || tile.requirementType === 'all_different') {
         const anySubmission = tile.submissions.find(sub =>
             sub.itemName.toLowerCase().trim() === exactItemName.toLowerCase().trim()
         );
         if (anySubmission) {
-            return { valid: false, reason: 'This item has already been submitted for this tile by another team member' };
+            return { valid: false, reason: 'This item has already been submitted for this tile (unique items required)' };
         }
     }
     
+    // For all other requirement types, allow any submissions (including duplicates)
     return { valid: true, exactItemName };
 }
 function addSubmission(team, coordinate, itemName, submittedBy, submitterRSN, attachmentUrl, submissionId, originalInput = null, similarity = 1) {
@@ -182,12 +169,12 @@ function approveSubmission(team, coordinate, submissionId) {
     }
     submission.approved = true;
     
-    // For total_any, always add the item (allow duplicates)
-    // For other types, only add if it doesn't already exist
-    const shouldAddItem = tile.requirementType === 'total_any' ||
+    // Only prevent duplicate items for requirement types that need unique items
+    // For all other types, always add the item (allow duplicates)
+    const shouldAddItem = (tile.requirementType === 'different' || tile.requirementType === 'all_different') ?
         !tile.obtainedItems.some(item =>
             item.itemName.toLowerCase().trim() === submission.itemName.toLowerCase().trim()
-        );
+        ) : true;
     
     if (shouldAddItem) {
         tile.obtainedItems.push({
